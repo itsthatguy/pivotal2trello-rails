@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  get 'trello/index'
-  get 'pivotal/index'
+  devise_for :users
+
+  resources 'cards'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

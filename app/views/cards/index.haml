@@ -1,0 +1,8 @@
+- pivotal_states.each do |state|
+  .small-2.columns
+    %h3= state
+    - pivotal.find_with_state(state).each do |card|
+      .panel
+        = card.name
+
+= console
